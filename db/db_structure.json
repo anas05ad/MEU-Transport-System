@@ -1,0 +1,32 @@
+{
+  "drivers": {
+    "Sami": {
+      "name": "Sami",
+      "license": "11234",
+      "isOnline": true,
+      "currentOrder": {
+        "status": "Waiting"
+      }
+    },
+    "Khaled": {
+      "name": "Khaled",
+      "license": "77889",
+      "isOnline": false,
+      "currentOrder": {
+        "status": "Waiting"
+      }
+    }
+  },
+  "buses": {
+    "68": {
+      "id": "68",
+      "capacity": 50,
+      "driver": "Not Assigned"
+    },
+    "102": {
+      "id": "102",
+      "capacity": 50,
+      "driver": "Sami"
+    }
+  }
+}

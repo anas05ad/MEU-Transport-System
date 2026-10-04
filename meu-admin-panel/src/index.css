@@ -1,0 +1,23 @@
+/* src/index.css — Vite starter defaults removed (they fought App.css) */
+html { -webkit-text-size-adjust:100%; }
+
+body {
+  margin:0;
+  font-family:var(--font-sans);
+  font-size:var(--text-body);
+  line-height:1.5;
+  color:var(--color-text);
+  background-color:var(--color-bg);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a { color:var(--color-accent); text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+button { font-family:inherit; font-size:inherit; }
+
+h1,h2,h3,h4 { margin:0; font-weight:600; }
+
+::placeholder { color:var(--color-text-muted); opacity:1; }

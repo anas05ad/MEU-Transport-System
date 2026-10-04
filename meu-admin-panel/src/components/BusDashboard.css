@@ -1,0 +1,252 @@
+/* BusDashboard.css */
+/* Add this to the bottom of BusDashboard.css */
+.form-input {
+    color: #1f2937; /* Dark text for inputs */
+    background-color: white;
+}
+
+/* Ensure the dropdown arrow is visible */
+select.form-input {
+    appearance: auto; 
+    cursor: pointer;
+}
+/* Main Container */
+.bus-dashboard-container {
+  padding: 40px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.dashboard-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.fix-data-btn {
+  background-color: #374151;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Table Styling */
+.bus-table-wrapper {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.bus-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bus-table th {
+  background-color: #374151;
+  color: #e5e7eb;
+  padding: 15px;
+  text-align: left;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.bus-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.status-badge {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.driver-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-btn {
+  background-color: #991b1b;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.edit-btn:hover {
+  background-color: #7f1d1d;
+}
+
+/* --- MODAL (POPUP) STYLES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px rgba(0,0,0,0.2);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+  background-color: #1f2937;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two Columns */
+  gap: 30px;
+}
+
+.form-section h4 {
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #4b5563;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box; /* Fixes width issues */
+}
+
+.form-input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  color: #9ca3af;
+}
+
+/* Driver Select & Map */
+.driver-select-group {
+  display: flex;
+  gap: 10px;
+}
+
+.add-driver-btn {
+  background: #e5e7eb;
+  border: none;
+  width: 42px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 120px;
+  background-color: #eff6ff;
+  border: 2px dashed #93c5fd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+.modal-footer {
+  padding: 15px 25px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.cancel-btn {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #374151;
+}
+
+.save-btn {
+  background-color: #991b1b;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
