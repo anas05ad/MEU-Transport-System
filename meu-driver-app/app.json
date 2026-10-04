@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "meu-driver-app",
+    "slug": "meu-driver-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "meudriverapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.meu.driver",
+      "config": {
+        "googleMapsApiKey": "REPLACE_WITH_YOUR_IOS_MAPS_KEY"
+      },
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "MEU Transport needs your location to provide real-time bus tracking for students.",
+        "NSLocationAlwaysUsageDescription": "MEU Transport needs to track the bus location while the app is in the background.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "MEU Transport needs your location to show your real-time position on the map.",
+        "UIBackgroundModes": [
+          "location",
+          "fetch"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.meu.driver",
+      "config": {
+        "googleMaps": {
+          "apiKey": "REPLACE_WITH_YOUR_ANDROID_MAPS_KEY"
+        }
+      }
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff",
+          "dark": {
+            "backgroundColor": "#000000"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
